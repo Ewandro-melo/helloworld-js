@@ -41,8 +41,11 @@ for (var i = 0; i < pacientes.length ; i++){
     }
 }
 var botaoAdicionar = document.querySelector("#adicionar-paciente");
-botaoAdicionar.addEventListener("Click", function(){
-    console.log("Miau");
+botaoAdicionar.addEventListener("Click",function(event){
+    event.preventDefault();
+    
+    var from = document.querySelector("#from-adiciona");
+    console.log(from);
 });
 //teste 
 titulo.addEventListener("click" , function (){
