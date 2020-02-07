@@ -22,14 +22,12 @@ for (var i = 0; i < pacientes.length ; i++){
     var alutraEhValida = true;
 
     if (peso < 0 || peso >= 1000 ){
-        console.log("Peso inválido");
         pesoEhValido = false;
         tdImc.textContent = "Peso inválido ";
         paciente.classList.add("paciente-invalido");
     }
 
     if (altura <= 0 || altura >= 3.00) {
-        console.log("Altura inválida");
         alutraEhValida = false;
         tdImc.textContent = "Altura inválida ";
         paciente.classList.add("paciente-invalido");
@@ -45,10 +43,7 @@ botaoAdicionar.addEventListener("Click",function(event){
     event.preventDefault();
     
     var from = document.querySelector("#from-adiciona");
-    console.log(from);
-});
-//teste 
-titulo.addEventListener("click" , function (){
-    console.log("Deu certo");
+    console.log(from.altura.value);
+    console.log(from.peso.value);
 });
 
