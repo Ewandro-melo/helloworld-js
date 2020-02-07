@@ -4,7 +4,7 @@ titulo.textContent = "Aparecida Nutricionista";
 var pacientes = document.querySelectorAll(".paciente");
 
 for (var i = 0; i < pacientes.length ; i++){
-    var paciente = paciente[i];
+    var paciente = pacientes[i];
 
 
     //calculo do imc 
@@ -25,17 +25,19 @@ for (var i = 0; i < pacientes.length ; i++){
         console.log("Peso inválido");
         pesoEhValido = false;
         tdImc.textContent = "Peso inválido ";
+        paciente.classList.add("paciente-invalido");
     }
 
     if (altura <= 0 || altura >= 3.00) {
         console.log("Altura inválida");
         alutraEhValida = false;
         tdImc.textContent = "Altura inválida ";
+        paciente.classList.add("paciente-invalido");
     }
 
     if (alutraEhValida && pesoEhValido){    
         var imc = peso / (altura * altura);
-        tdImc.textContent = imc;
+        tdImc.textContent = imc.toFixed(2);
 }
 
 }
