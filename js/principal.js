@@ -38,7 +38,14 @@ for (var i = 0; i < pacientes.length ; i++){
     if (alutraEhValida && pesoEhValido){    
         var imc = peso / (altura * altura);
         tdImc.textContent = imc.toFixed(2);
+    }
 }
-
-}
+var botaoAdicionar = document.querySelector("#adicionar-paciente");
+botaoAdicionar.addEventListener("Click", function(){
+    console.log("Miau");
+});
+//teste 
+titulo.addEventListener("click" , function (){
+    console.log("Deu certo");
+});
 
